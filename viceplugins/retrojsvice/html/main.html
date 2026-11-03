@@ -447,7 +447,9 @@ function registerEventHandlers() {
             },
             false
         );
-    } else if(useOnMouseWheel) {
+    } else if(useOnMouseWheel || typeof document.onwheel == "undefined") {
+        // Old WebKit (e.g. Safari 3-5) has onmousewheel but no onwheel. Use
+        // typeof, not the "in" operator, which IE 4/5 (JScript < 5.5) cannot parse.
         document.onmousewheel = function(event) {
             if(!event) event = window.event;
             putEvent("MWH_" + mouseX + "_" + mouseY + "_" + (event.wheelDelta | 0));

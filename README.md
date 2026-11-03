@@ -1,5 +1,9 @@
 # Browservice: Browser as a Service
 
+> **About this fork:** it adds a Docker setup for running the final release
+> on x86_64 and ARM hosts, with Chromium's sandbox kept on, and mouse wheel
+> scrolling for old Safari (3-5). See [`docker/README.md`](docker/README.md).
+
 ## ⚠️ UNMAINTAINED (2026-09-11)
 
 **Browservice is no longer maintained.** I, [@ttalvitie](https://github.com/ttalvitie/), will not be making new releases, providing updated binaries, fixing bugs, answering issues or reviewing pull requests.
